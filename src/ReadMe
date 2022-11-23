@@ -64,6 +64,8 @@ https://cucumber.io/docs/gherkin/reference/#keywords
 
        </dependencies>       ===> Bunla bitmesi lazim
 
+!NOT: TESTNG BIZE ASSERTION VE PARALEL TEST IMKANI SAGLIYOR
 
+TODO: STATIKIN ILK DISI MI OKUNUR YOKSA ICI MI OKUNUR ORNEK:STATIK DISI: INT I;  STATIK ICI I=5;
 
 

@@ -5,12 +5,6 @@ import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.bytebuddy.description.type.TypeList;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import java.time.Duration;
 
 public class _01_LoginSteps {
 
@@ -23,16 +17,22 @@ public class _01_LoginSteps {
 
     @When("Enter username and password and click Login Button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOf(dc.userName));
 
+/*      WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.visibilityOf(dc.userName));
         dc.userName.sendKeys("richfield.edu");
         dc.password.sendKeys("Richfield2020!");
         dc.loginButton.click();
+*/
+        dc.findAndSend("userName","richfield.edu");
+        dc.findAndSend("password","Richfield2020!");
+        dc.findAndClick("loginButton");
     }
-
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
+
+        dc.findAndContainsText("dashBoardElement","dashBoard");
+
 
     }
 }

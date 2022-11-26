@@ -1,0 +1,22 @@
+org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+
+--------------------------------------------------------------------------------------------
+
+bu hatayi aliyorsan pomdaki bir elementi initialize edemiyor demektir yani
+elementlerden birini yanlis bulmus olabilirsin.
+
+--------------------------------------------------------------------------------------------
+
+Pages klasorumde ---> page object model (POM) larimi koydum
+
+pomun classlarinin ortak methodlarini parentin icine koydum
+
+--------------------------------------------------------------------------------------------
+
+FrameWorkumde
+inheritance
+encapsulation kullandim
+
+--------------------------------------------------------------------------------------------
+
+Singleton -----> static driver olusturarak onu her yerde kullanma islemi

@@ -38,7 +38,6 @@ public class Parent {
     }
 
     public void sendKeysFunction(WebElement element, String value) {
-
         waitUntilVisible(element);
         scrollToElement(element);
         element.clear();
@@ -49,7 +48,8 @@ public class Parent {
     public void verifyContainsTextFunction(WebElement element, String text) {
 
         waitUntilVisible(element);
-        scrollToElement(element); //hoca burayi sildi ama bizce gerekli
+        scrollToElement(element); //hoca burayi sildi ama bizce gerekli\
+        wait.until(ExpectedConditions.textToBePresentInElement(element, text));
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()),"The text could not be find");
 
     }

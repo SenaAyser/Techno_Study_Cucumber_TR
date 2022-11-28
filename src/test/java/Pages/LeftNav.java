@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LeftNav extends Parent {
 
     public LeftNav() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
@@ -19,6 +19,7 @@ public class LeftNav extends Parent {
 
     @FindBy(xpath = "(//span[text()='Countries'])")
     private WebElement countries;
+
 
     WebElement myElement;
 
@@ -38,4 +39,5 @@ public class LeftNav extends Parent {
         }
         clickFunction(myElement);
     }
+
 }

@@ -23,6 +23,13 @@ public class DialogContent extends Parent {
     @FindBy(css = "span[class='nav-link-title']")
     private WebElement dashBoardElement;
 
+    @FindBy(css = "[class='svg-inline--fa fa-plus']")
+    private WebElement addCountry;
+
+    @FindBy(css = "input[id='ms-text-field-2']")
+    private WebElement newCountryName;
+
+
     WebElement myElement;
 
     public void findAndSend(String strElement, String value) {
@@ -46,6 +53,10 @@ public class DialogContent extends Parent {
             case "loginButton":
                 myElement = loginButton;
                 break;
+
+            case "addCountry":
+                myElement = addCountry;
+                break;
         }
         clickFunction(myElement);
     }
@@ -58,5 +69,15 @@ public class DialogContent extends Parent {
                 break;
         }
         verifyContainsTextFunction(myElement,text);
+    }
+
+
+    public void findAndSendKeys(String strElement, String value) {
+        switch (strElement) {
+            case "newCountryName":
+                myElement = addCountry;
+                break;
+        }
+        sendKeysFunction(myElement,value);
     }
 }

@@ -15,8 +15,8 @@
       And Navigate to CitizenShip page
 
       Scenario: CitizenShip Create
-        When User a CitizenShip name as "brokoly" short name as "brk"
+        When User a CitizenShip name as "brokoly1" short name as "brk1"
         Then Success message should be displayed
 
-        When User a CitizenShip name as "brokoly" short name as "brk"
+        When User a CitizenShip name as "brokoly1" short name as "brk1"
         Then Already exist message should be displayed

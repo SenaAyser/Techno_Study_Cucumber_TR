@@ -11,8 +11,8 @@ public class LeftNav extends Parent {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//span[text()='Setup'])[1]")
-    private WebElement setup;
+    @FindBy(xpath="(//span[text()='Setup'])[1]")
+    private WebElement setupOne;
 
     @FindBy(xpath = "(//span[text()='Parameters'])")
     private WebElement parameters;
@@ -20,14 +20,14 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "(//span[text()='Countries'])[1]")
     private WebElement countries;
 
-    @FindBy(xpath = "(//span[text()='CitizenShips'])[1]")
+    @FindBy(xpath="(//span[text()='Citizenships'])[1]")
     private WebElement citizenShip;
     WebElement myElement;
 
     public void findAndClick(String strElement) {
 
         switch (strElement) {
-            case "setup" -> myElement = setup;
+            case "setupOne" -> myElement = setupOne;
             case "parameters" -> myElement = parameters;
             case "countries" -> myElement = countries;
             case "citizenShip" -> myElement = citizenShip;

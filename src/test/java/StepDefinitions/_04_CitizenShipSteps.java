@@ -13,11 +13,9 @@ public class _04_CitizenShipSteps {
 
     @And("Navigate to CitizenShip page")
     public void navigateToCitizenShipPage() {
-
-        lf.findAndClick("setup");
-        lf.findAndClick("Parameters");
+        lf.findAndClick("setupOne");
+        lf.findAndClick("parameters");
         lf.findAndClick("citizenShip");
-
     }
 
     @When("User a CitizenShip name as {string} short name as {string}")

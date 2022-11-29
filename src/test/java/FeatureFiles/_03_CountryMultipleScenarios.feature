@@ -1,4 +1,4 @@
-Feature: Country Functionality
+Feature: Country Multi Scenario
 
   Background:
     Given Navigate to Campus
@@ -9,4 +9,8 @@ Feature: Country Functionality
   Scenario:  Create Country
 
     When Create a country
+    Then Success message should be displayed
+
+  Scenario: Create a country parameter data
+    When Create a country name as "brkly" code as "brdkrn"
     Then Success message should be displayed

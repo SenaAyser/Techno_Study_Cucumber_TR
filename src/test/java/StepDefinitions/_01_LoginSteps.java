@@ -33,7 +33,6 @@ public class _01_LoginSteps {
     public void userShouldLoginSuccessfully() throws InterruptedException {
 
         dc.findAndContainsText("txtTechnoStudy","Techno Study");
-        dc.findAndClick("saveButton");
 
     }
 }

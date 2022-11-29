@@ -25,13 +25,23 @@ public class _02_CountrySteps {
         String randomGenName = RandomStringUtils.randomAlphanumeric(8);
         String randomGenCode = RandomStringUtils.randomNumeric(4);
         dc.findAndClick("addButton");
-        dc.findAndSend("nameInput",randomGenName);
-        dc.findAndSend("codeInput",randomGenCode);
+        dc.findAndSend("nameInput", randomGenName);
+        dc.findAndSend("codeInput", randomGenCode);
         dc.findAndClick("saveButton");
 
     }
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
+        dc.findAndContainsText("successMessage","success");
+    }
+
+    @When("Create a country name as {string} code as {string}")
+    public void createACountryNameAsCodeAs(String name, String code) {
+
+        dc.findAndClick("addButton");
+        dc.findAndSend("nameInput", name);
+        dc.findAndSend("codeInput", code);
+        dc.findAndClick("saveButton");
     }
 }

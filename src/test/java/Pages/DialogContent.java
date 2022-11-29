@@ -20,15 +20,20 @@ public class DialogContent extends Parent {
     @FindBy(css = "button[aria-label='LOGIN']")
     private WebElement loginButton;
 
-    @FindBy(css = "span[class='nav-link-title']")
-    private WebElement dashBoardElement;
+    @FindBy(css = "span[class='mat-tooltip-trigger logo-text']")
+    private WebElement txtTechnoStudy;
 
-    @FindBy(css = "[class='svg-inline--fa fa-plus']")
-    private WebElement addCountry;
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
+    private WebElement addButton;
 
-    @FindBy(css = "input[id='ms-text-field-2']")
-    private WebElement newCountryName;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
+    private WebElement nameInput;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
+    private WebElement codeInput;
+
+    @FindBy(xpath = "//ms-save-button/button")
+    private WebElement saveButton;
 
     WebElement myElement;
 
@@ -36,12 +41,10 @@ public class DialogContent extends Parent {
 
         //element get
         switch (strElement) {
-            case "userName":
-                myElement = userName;
-                break;
-            case "password":
-                myElement = password;
-                break;
+            case "userName" -> myElement = userName;
+            case "password" -> myElement = password;
+            case "nameInput" -> myElement = nameInput;
+            case "codeInput" -> myElement = codeInput;
         }
         sendKeysFunction(myElement, value);
     }
@@ -50,13 +53,10 @@ public class DialogContent extends Parent {
 
         //element get
         switch (strElement) {
-            case "loginButton":
-                myElement = loginButton;
-                break;
+            case "loginButton" -> myElement = loginButton;
+            case "addButton" -> myElement = addButton;
+            case "saveButton" -> myElement = saveButton;
 
-            case "addCountry":
-                myElement = addCountry;
-                break;
         }
         clickFunction(myElement);
     }
@@ -64,20 +64,8 @@ public class DialogContent extends Parent {
     public void findAndContainsText(String strElement, String text) {
 
         switch (strElement) {
-            case "dashBoardElement":
-                myElement = dashBoardElement;
-                break;
+            case "txtTechnoStudy" -> myElement = txtTechnoStudy;
         }
-        verifyContainsTextFunction(myElement,text);
-    }
-
-
-    public void findAndSendKeys(String strElement, String value) {
-        switch (strElement) {
-            case "newCountryName":
-                myElement = addCountry;
-                break;
-        }
-        sendKeysFunction(myElement,value);
+        verifyContainsTextFunction(myElement, text);
     }
 }

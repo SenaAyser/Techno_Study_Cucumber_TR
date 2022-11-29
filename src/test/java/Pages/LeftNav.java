@@ -12,7 +12,7 @@ public class LeftNav extends Parent {
     }
 
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
-    private WebElement setupOne;
+    private WebElement setup;
 
     @FindBy(xpath = "(//span[text()='Parameters'])")
     private WebElement parameters;
@@ -20,24 +20,21 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "(//span[text()='Countries'])")
     private WebElement countries;
 
-
     WebElement myElement;
 
     public void findAndClick(String strElement) {
 
-        //element get
-        switch (strElement) {
-            case "setupOne":
-                myElement = setupOne;
+        switch (strElement){
+            case "setup":
+                myElement=setup;
                 break;
             case "parameters":
-                myElement = parameters;
+                myElement=parameters;
                 break;
             case "countries":
-                myElement = countries;
+                myElement=countries;
                 break;
         }
         clickFunction(myElement);
     }
-
 }

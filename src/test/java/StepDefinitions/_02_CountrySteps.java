@@ -14,7 +14,7 @@ public class _02_CountrySteps {
 
     @And("Navigate to country page")
     public void navigateToCountryPage() {
-        ln.findAndClick("setup");
+        ln.findAndClick("setupOne");
         ln.findAndClick("parameters");
         ln.findAndClick("countries");
     }

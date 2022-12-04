@@ -1,6 +1,9 @@
-org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+--------------------------------------------------------------------------------------------
+https://selleo.com/blog/how-to-start-writing-gherkin-test-scenarios  => Given When Then
 
 --------------------------------------------------------------------------------------------
+
+org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
 
 bu hatayi aliyorsan pomdaki bir elementi initialize edemiyor demektir yani
 elementlerden birini yanlis bulmus olabilirsin.
@@ -20,3 +23,9 @@ encapsulation kullandim
 --------------------------------------------------------------------------------------------
 
 Singleton -----> static driver olusturarak onu her yerde kullanma islemi
+
+--------------------------------------------------------------------------------------------
+
+   #    Senaryo Outline da verilen değerler için tüm senaryo her satır kadar tekrar çalıştırılıyordu.
+      #    DataTable da ise, sadece ilgili step için toplu veri gönderme imkanı oluşuyor.
+

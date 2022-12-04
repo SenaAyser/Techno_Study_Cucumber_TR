@@ -30,6 +30,11 @@ public class _04_CitizenShipSteps {
 
     @Then("Already exist message should be displayed")
     public void alreadyExistMessageShouldBeDisplayed() {
-        dc.findAndContainsText("alreadyExist","already");
+        dc.findAndContainsText("alreadyExist", "already");
+    }
+
+    @When("User delete the {string}")
+    public void userDeleteThe(String searchWord) {
+        dc.findAndDelete(searchWord);
     }
 }

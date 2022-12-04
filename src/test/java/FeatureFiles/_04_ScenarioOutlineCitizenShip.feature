@@ -5,7 +5,7 @@
   #Parameter yontemi ile yapiniz
 
 
-
+  
   Feature: CitizenShip
 
     Background:
@@ -14,9 +14,18 @@
       Then User should login successfully
       And Navigate to CitizenShip page
 
-      Scenario: CitizenShip Create
-        When User a CitizenShip name as "brokoly1" short name as "brk1"
-        Then Success message should be displayed
+    Scenario Outline: CitizenShip Create
+      When User a CitizenShip name as "<Name>" short name as "<ShortName>"
+      Then Success message should be displayed
 
-        When User a CitizenShip name as "brokoly1" short name as "brk1"
-        Then Already exist message should be displayed
+      When User a CitizenShip name as "<Name>" short name as "<ShortName>"
+      Then Already exist message should be displayed
+
+      When User delete the "<Name>"
+      Then Success message should be displayed
+
+
+      Examples:
+        | Name        | ShortName |
+        | brklyyyyyy    | brk1      |
+

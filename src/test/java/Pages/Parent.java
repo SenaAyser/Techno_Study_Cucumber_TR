@@ -1,8 +1,11 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -10,7 +13,7 @@ import org.testng.Assert;
 import java.time.Duration;
 
 public class Parent {
-
+static int i = 3;
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
 
     public void waitUntilVisible(WebElement element) {
@@ -19,7 +22,6 @@ public class Parent {
     }
 
     public void waitUntilClickable(WebElement element) {
-
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
@@ -51,6 +53,11 @@ public class Parent {
         scrollToElement(element); //hoca burayi sildi ama bizce gerekli\
         wait.until(ExpectedConditions.textToBePresentInElement(element, text));
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()),"The text could not be find");
+        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).perform(); //acik diyalog kutusu varsa kapatmak icin yaptim
 
+    }
+
+    public void waitUntilLoading(){
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));
     }
 }

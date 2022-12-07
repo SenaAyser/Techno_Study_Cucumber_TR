@@ -20,7 +20,7 @@ Feature: Exam Functionality
       | addButton |
 
     And User sending the keys in Dialog content
-      | nameInput | brokolyyy |
+      | nameInput | brokoli2 |
 
     And Click on the element in the Form Content
       | academicPeriod  |
@@ -39,6 +39,6 @@ Feature: Exam Functionality
       | entranceExamsTwo |
 
     And User delete item from Dialog
-      | brokolyyy |
+      | brokoli2 |
 
     Then Success message should be displayed

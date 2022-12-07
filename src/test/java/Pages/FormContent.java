@@ -1,14 +1,15 @@
 package Pages;
 
 import Utilities.GWD;
+import Utilities.GWD_Old;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FormContent extends Parent{
+public class FormContent extends Parent {
 
     public FormContent() {
-        PageFactory.initElements(GWD.getDriver(), this);
+        PageFactory.initElements(GWD_Old.getDriver(), this);
     }
 
     @FindBy(xpath = "(//mat-select[@formcontrolname='id']/div/div)[1]")
@@ -33,31 +34,17 @@ public class FormContent extends Parent{
     private WebElement gradeLevel5;
 
     WebElement myElement;
-    public void findAndClick(String strlement) {
-        //element get :burda string isimden weblemente ulaşıcam
-        switch (strlement) {
-            case "academicPeriod":
-                myElement = academicPeriod;
-                break;
-            case "academicPeriod1":
-                myElement = academicPeriod1;
-                break;
-            case "gradeLevel":
-                myElement = gradeLevel;
-                break;
-            case "gradeLevel2":
-                myElement = gradeLevel2;
-                break;
-            case "gradeLevel3":
-                myElement = gradeLevel3;
-                break;
-            case "gradeLevel4":
-                myElement = gradeLevel4;
-                break;
-            case "gradeLevel5":
-                myElement = gradeLevel5;
-                break;
 
+    public void findAndClick(String strElement) {
+        //element get :burda string isimden weblemente ulaşıcam
+        switch (strElement) {
+            case "academicPeriod" -> myElement = academicPeriod;
+            case "academicPeriod1" -> myElement = academicPeriod1;
+            case "gradeLevel" -> myElement = gradeLevel;
+            case "gradeLevel2" -> myElement = gradeLevel2;
+            case "gradeLevel3" -> myElement = gradeLevel3;
+            case "gradeLevel4" -> myElement = gradeLevel4;
+            case "gradeLevel5" -> myElement = gradeLevel5;
         }
 
         clickFunction(myElement);

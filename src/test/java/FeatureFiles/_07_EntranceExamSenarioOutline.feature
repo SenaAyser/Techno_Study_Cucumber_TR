@@ -28,11 +28,12 @@ Feature: Exam Functionality
     And User sending the keys in Dialog content
       | nameInput | <ExamName> |
 
+
     And Click on the element in the Form Content
       | academicPeriod         |
-      | <academicPeriodOption> |
+      | <AcademicPeriodOption> |
       | gradeLevel             |
-      | <gradeLevelOption>     |
+      | <GradeLevelOption>     |
 
     And Click on the element in Dialog
       | saveButton |
@@ -50,8 +51,8 @@ Feature: Exam Functionality
     Then Success message should be displayed
 
     Examples:
-      | ExamName        | academicPeriodOption | gradeLevelOption |
-      | Math exam is11   | academicPeriod1      | gradeLevel2      |
-      | IT exam is11     | academicPeriod1      | gradeLevel3      |
-      | Oracle exam is11 | academicPeriod1      | gradeLevel4      |
-      | Math exam  is11  | academicPeriod1      | gradeLevel5      |
+      | ExamName | AcademicPeriodOption | GradeLevelOption |
+      | Math     | academicPeriod1      | gradeLevel2      |
+      | IT       | academicPeriod1      | gradeLevel3      |
+      | Oracle   | academicPeriod1      | gradeLevel4      |
+      | Mathex   | academicPeriod1      | gradeLevel5      |

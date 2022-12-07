@@ -50,6 +50,8 @@ Feature: Datatable Functionality
 
     Then Success message should be displayed
 
+    #TODO: Create fee delete fee
+
   Scenario: Fee Functionality
     And Click on the element in left nav
 
@@ -61,8 +63,8 @@ Feature: Datatable Functionality
       | addButton |
 
     And User sending the keys in Dialog content
-      | nameInput       | BrkFee1852 |
-      | codeInput       | 112233     |
+      | nameInput       | BrklyFee |
+      | codeInput       | 123456     |
       | integrationCode | 1122334455 |
       | priorityCode    | 2615       |
 
@@ -73,7 +75,7 @@ Feature: Datatable Functionality
     And Success message should be displayed
 
     And User delete item from Dialog
-      | BrkFee1852 |
+      | BrklyFee |
 
     Then Success message should be displayed
 

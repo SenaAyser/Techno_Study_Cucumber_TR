@@ -29,3 +29,13 @@ Singleton -----> static driver olusturarak onu her yerde kullanma islemi
    #    Senaryo Outline da verilen değerler için tüm senaryo her satır kadar tekrar çalıştırılıyordu.
       #    DataTable da ise, sadece ilgili step için toplu veri gönderme imkanı oluşuyor.
 
+--------------------------------------------------------------------------------------------
+
+Not Cell tek basinayken celldir ancak sen cell1+cell2... yaparsaan bu artik stringe donusur
+
+sout un icine cell yazarsan da otomatik stringe donusturur
+
+int s=3;
+String b;
+b = s+"s";
+b = s;

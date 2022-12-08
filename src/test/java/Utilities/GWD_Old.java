@@ -27,7 +27,7 @@ public class GWD_Old {
 
             ChromeOptions opt = new ChromeOptions();
 
-            opt.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+            opt.setBinary("C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe");
 
             driver = new ChromeDriver(opt);
 

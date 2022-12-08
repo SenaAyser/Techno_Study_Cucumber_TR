@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.slf4j.MDC;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -37,10 +38,9 @@ public class GWD {
             System.setProperty("user.language", "EN");*/
 
         Logger.getLogger("").setLevel(Level.SEVERE);
-        System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "Error");
 
         if (threadBrowserName.get() == null) // diğer testlerimizi direk çalıştırırken, XML den parametre gelmeyeceği için
-            threadBrowserName.set("chrome");  // default olarak chrome atandı
+            threadBrowserName.set("firefox");  // default olarak chrome atandı
 
 
         if (threadDriver.get() == null) // eger driverin ici bir kez dolduysa bir daha asagidaki islemleri yapmasina gerek kalmayacak sadece driver return edecek

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class DialogContent extends Parent {
 
     public DialogContent() {
-        PageFactory.initElements(GWD_Old.getDriver(), this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     @FindBy(css = "input[formcontrolname='username']")

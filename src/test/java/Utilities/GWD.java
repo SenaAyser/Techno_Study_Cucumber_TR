@@ -32,6 +32,10 @@ public class GWD {
 // threadDriver.get() -> bulunduğum thread deki drierı verecek
     // threadDriver.set(driver) -> bulunduğum thread e driver set ediliyor
 
+    public static String getThreadBrowserName() {
+        return GWD.threadBrowserName.get();
+    }
+
     public static WebDriver getDriver() {
             /*// extend report türkçe bilg çalışmaması sebebiyle kondu
             Locale.setDefault(new Locale("EN"));

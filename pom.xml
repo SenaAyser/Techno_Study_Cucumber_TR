@@ -20,33 +20,38 @@
             <artifactId>selenium-java</artifactId>
             <version>4.5.0</version>
         </dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.9.0</version>
             <scope>test</scope>   <!--bunu sonradan ekledik-->
         </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.8.7</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>7.9.0</version>
             <scope>test</scope>   <!--bunu sonradan ekledik-->
         </dependency>
+
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.3.1</version>
         </dependency>
 
-        <!-- Excel işlemleri için aşağıdaki 2 depency ye kullanılıyor,  ilki random veri üretmek ve FileUtils için de kullanıldı-->
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
+            <!-- Excel işlemleri için aşağıdaki 2 depency ye kullanılıyor,  ilki random veri üretmek ve FileUtils için de kullanıldı-->
+            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+            <!--            random sayı ve text üretmek için ekledik-->
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>4.1.0</version>
@@ -64,6 +69,7 @@
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.9.2</version>
         </dependency>
+
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
@@ -75,14 +81,6 @@
             <artifactId>lombok-maven-plugin</artifactId>
             <version>1.18.20.0</version>
             <scope>provided</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.30</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
@@ -102,7 +100,7 @@
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.7.0</version>
+                <version>5.0.0</version>
                 <executions>
                     <execution>
                         <id>execution</id>

@@ -39,3 +39,7 @@ int s=3;
 String b;
 b = s+"s";
 b = s;
+
+--------------------------------------------------------------------------------------------
+
+Background : sayfadaki tum senaryolar icin backgrounddur defalarca yazman gerekmez

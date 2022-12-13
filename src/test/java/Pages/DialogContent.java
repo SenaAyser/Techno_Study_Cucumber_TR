@@ -133,4 +133,7 @@ public class DialogContent extends Parent {
         findAndClick("deleteDialogButton");
 
     }
+
+
+
 }

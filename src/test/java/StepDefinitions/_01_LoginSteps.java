@@ -12,7 +12,7 @@ public class _01_LoginSteps {
     DialogContent dc = new DialogContent();
     @Given("Navigate to Campus")
     public void navigateToCampus() {
-        GWD.getDriver().get("https://demo.mersys.io/");
+        GWD.getDriver().get("https://test.mersys.io/");
         GWD.getDriver().manage().window().maximize();
     }
 
@@ -25,8 +25,8 @@ public class _01_LoginSteps {
         dc.password.sendKeys("Richfield2020!");
         dc.loginButton.click();
 */
-        dc.findAndSend("userName","richfield.edu");
-        dc.findAndSend("password","Richfield2020!");
+        dc.findAndSend("userName","turkeyts");
+        dc.findAndSend("password","TechnoStudy123");
         dc.findAndClick("loginButton");
     }
     @Then("User should login successfully")

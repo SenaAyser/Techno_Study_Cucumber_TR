@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import Utilities.ExcelUtility;
 import Utilities.GWD;
 import com.aventstack.extentreports.service.ExtentService;
 import io.cucumber.java.After;
@@ -27,7 +28,16 @@ public class Hooks {
 
         System.out.println("Senaryo bitti");
 
-        if (senaryo.isFailed()) {
+        LocalDateTime time = LocalDateTime.now();
+        DateTimeFormatter tf = DateTimeFormatter.ofPattern("dd_MM_YYHHmmss");
+        // Senaryoların sonuçlarını bir excel formatından yazdırmak istiyorum
+
+        ExcelUtility.writeToExcel("src/test/java/ApachePOI/resource/ScenarioStatus.xlsx",
+                senaryo,GWD.getThreadBrowserName(),time.format(tf));
+
+        if (senaryo.isFailed()) {// senaryo bittiğinde
+
+            // Extend report için diğer durumlarda kaldıralım
 
             final byte[] byteHali=((TakesScreenshot) GWD.getDriver()).getScreenshotAs(OutputType.BYTES);
             senaryo.attach(byteHali, "image/png", "screenshot name");

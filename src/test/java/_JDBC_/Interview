@@ -1,0 +1,53 @@
+                                                    NOTLAR
+
+
+JDBC Nedir ?
+veritabanlarını automation yapmama yardımcı oluyor.
+sorgularımı gönderiyorum, gelen sonuçlarla , UI daki
+gözüken sonuçları karşılaştırıyorum.
+
+JDBC yi nasıl kullanırsın ?
+URL, username ve password vererek bir connection oluştururm.
+Bu connection üzerinde satement oluşturarak, sorgularımı çalıştırırım.
+Sonuçları ResultSet atarak kullanırım.
+
+Excel konusundaki durum
+excel dosyasını Excel programı ile
+manuel açarak kontrol ettik.
+PachePOI ile automation yaptık.
+
+Java sana yolu açıyor.
+bir interface(tercüman) gerekiyor: JDBC-MySQL
+Javanın içinden DB yi kullanacağız.
+
+Manuel Testing->program
+Java dan (Lib)-> automation
+İsmet Hoca — Today at 9:56 AM
+Application Periphial Interface
+API -> Arayüz -> Tercüman   Excel Dosyası -> nesnem
+Excel Programı-> nesneyi manuel edit
+ApachePOI     -> nesneyi Java içinden automation
+                 Library, Kutuphane, API, Interface,tercüman
+
+DB (Sakila)    -> nesnem
+MySql WorkBench-> nesneyi manuel edit
+JDBC-MySql     -> nesneyi Java içinden automation
+                  Library, Kutuphane, API, Interface,tercüman
+
+API Konusunda  ->
+
+//dersNotu
+1 -connection ayarla
+2- db sec
+   -> hostname:db-url,username, password,sakila
+
+3- connection aç (tıklat)
+
+4- sql komutlarının çalıştırılacağı
+   ortamı açtım
+   ortam üzerinden sorguyu gönderdim.
+
+4-Sorgunun sonucunu bir SonucTablosu şeklinde
+  aldım -> ResultSet
+
+

@@ -63,17 +63,40 @@ public class ExcelUtility {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }
-        else{
-         /*   Sheet sheet =null;
+        } else {//var ise
+            FileInputStream inputStream=null;
+            Sheet sheet = null;
+            Workbook workbook = null;
             try {
-                FileInputStream inputStream = new FileInputStream(path);
-                Workbook workbook=WorkbookFactory.create(inputStream);
-                 sheet = workbook.getSheetAt(0);
+                inputStream = new FileInputStream(path);
+                workbook = WorkbookFactory.create(inputStream);
+                sheet = workbook.getSheetAt(0);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            Row row = sheet.createRow(sheet.getPhysicalNumberOfRows())*/
+            Row row = sheet.createRow(sheet.getPhysicalNumberOfRows());
+
+            Cell cell = row.createCell(0);
+            cell.setCellValue(scenario.getName());
+
+            cell = row.createCell(1);
+            cell.setCellValue(scenario.getStatus().toString());
+
+            cell = row.createCell(2);
+            cell.setCellValue(browserName);
+
+            cell = row.createCell(2);
+            cell.setCellValue(time);
+
+            try {
+                inputStream.close();
+                FileOutputStream outputStream = new FileOutputStream(path);
+                workbook.write(outputStream);
+                workbook.close();
+                outputStream.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DialogContent extends Parent {
 
     public DialogContent() {
@@ -71,6 +73,9 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
     private WebElement toggleBar;
+
+    @FindBy(xpath = "//tbody[@role='rowgroup']/tr/td[2]")
+    public List<WebElement> nameList;
     WebElement myElement;
 
     public void findAndSend(String strElement, String value) {
@@ -99,8 +104,8 @@ public class DialogContent extends Parent {
             case "searchButton" -> myElement = searchButton;
             case "deleteButton" -> myElement = deleteButton;
             case "deleteDialogButton" -> myElement = deleteDialogButton;
-            case "toggleBar"->myElement=toggleBar;
-            case "acceptCookies"->myElement=acceptCookies;
+            case "toggleBar" -> myElement = toggleBar;
+            case "acceptCookies" -> myElement = acceptCookies;
 
         }
         clickFunction(myElement);
@@ -133,7 +138,6 @@ public class DialogContent extends Parent {
         findAndClick("deleteDialogButton");
 
     }
-
 
 
 }
